@@ -1,0 +1,16 @@
+OPEN COMMAND TERMINAL: $botRoot = "D:\Commander\sonion-main"
+
+& "$botRoot\venv311\Scripts\python.exe" "$botRoot\src\Nexto\command_input.py"
+
+START GAME: $botRoot = "D:\Commander\sonion-main"
+Set-Location $botRoot
+& "$botRoot\venv311\Scripts\python.exe" -m py_compile "$botRoot\venv311\Lib\site-packages\rlbot\matchcomms\server.py"
+& "$botRoot\venv311\Scripts\python.exe" "$botRoot\run_nexto_commands_match.py"
+
+Run this command: $botRoot = "D:\Commander\sonion-main"
+Set-Location $botRoot
+
+Syntax Check: $botRoot = "D:\Commander\sonion-main"
+$python = "$botRoot\venv311\Scripts\python.exe"
+
+& $python -m py_compile "$botRoot\venv311\Lib\site-packages\rlbot\gateway_util.py"
